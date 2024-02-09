@@ -43,16 +43,8 @@ app.get('/', (req, res) => {
 })
 
 app.get("/dashboard", async (req, res) => {
-  let fetchData;
-  if (req.query.filter !== undefined && req.query.search !== undefined) {
-    const filterData = req.query.filter;
-    const searchData = req.query.search;
-    const searchQuery = { [filterData]: searchData };
-    console.log(searchQuery);
-    fetchData = await DashboardData.find(searchQuery);
-  } else {
-    fetchData = await DashboardData.find({});
-  }
+ 
+    const fetchData = await DashboardData.find({});
   res.send(fetchData);
 });
 app.listen(port, () => {
