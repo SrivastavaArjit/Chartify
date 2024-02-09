@@ -42,10 +42,14 @@ app.get('/', (req, res) => {
   res.send("Hello World");
 })
 
-app.get("/dashboard", async (req, res) => {
+// app.get("/dashboard", async (req, res) => {
  
-    const fetchData = await DashboardData.find({});
-  res.send(fetchData);
+//     const fetchData = await DashboardData.find({});
+//   res.send(fetchData);
+// });
+app.get("/dashboard",  (req, res) => {
+ 
+   res.send("Hello Dashboard");
 });
 app.listen(port, () => {
   console.log("listening on port 3000...");
