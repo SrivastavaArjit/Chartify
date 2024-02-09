@@ -38,6 +38,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+  console.log("Hello World");
+})
+
 app.get("/dashboard", async (req, res) => {
   let fetchData;
   if (req.query.filter !== undefined && req.query.search !== undefined) {
