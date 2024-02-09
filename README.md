@@ -77,7 +77,7 @@ If you Prefet to use the hosted server, you can acess it at the following URL:
 
 Please note that you won't need to set up a local environment or MongoDB URI for the hosted server.
 
-- Finally, Comment out the code respective the server you are not using. 
+- Finally, Go to the Dashboard.jsx file and comment out the code respective the server you are not using. 
 - Refer the following code image.
 
   ![Screenshot 2024-02-09 162502](https://github.com/SrivastavaArjit/Chartify/assets/82926673/7c79e7ef-2851-4cd3-be75-beecb0fabb3d)
