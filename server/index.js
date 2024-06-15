@@ -32,10 +32,7 @@ run().catch(console.dir);
 
 //Enabling Cors
 app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://chartify-client.vercel.app"
-  );
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type");
   next();
