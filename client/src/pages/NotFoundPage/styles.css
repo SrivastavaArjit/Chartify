@@ -1,0 +1,13 @@
+.notfound-container {
+  position: relative;
+  height: 100vh;
+
+  img {
+    min-width: 80%;
+    min-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

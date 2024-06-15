@@ -1,5 +1,16 @@
+import "./styles.css";
+
 const NotFoundPage = () => {
-  return <>404 Not Found</>;
+  return (
+    <div className="notfound-container">
+      <img
+        src="/pageNotFound.svg"
+        alt="404 Not Found"
+        width="500px"
+        height="500px"
+      />
+    </div>
+  );
 };
 
 export default NotFoundPage;
