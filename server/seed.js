@@ -19,14 +19,28 @@ async function run() {
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
-  } finally {
+  } catch {
     // Ensures that the client will close when you finish/error
-    await mongoose.disconnect();
+    console.log("Error Occurred");
   }
 }
 run().catch(console.dir);
+
+await DashboardData.deleteMany({})
+  .then((deleteManyResult) => {
+    console.log(
+      "Successfully deleted:",
+      deleteManyResult.deletedCount,
+      "documents"
+    );
+  })
+  .catch((err) => {
+    console.log("Error:", err);
+  });
 
 const data = fs.readFileSync("jsondata.json", "utf8");
 const parseData = JSON.parse(data);
 
 await DashboardData.insertMany(parseData);
+
+await mongoose.disconnect();

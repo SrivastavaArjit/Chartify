@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no text specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node seed.js && nodemon index.js"
   },
   "dependencies": {
     "dotenv": "^16.4.1",
