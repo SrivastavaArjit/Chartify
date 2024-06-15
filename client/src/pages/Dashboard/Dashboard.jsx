@@ -12,6 +12,7 @@ const Dashboard = () => {
   const [isFetching, setIsFetching] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
+<<<<<<< HEAD
       //Add this code if you are working with the hoster server.
       const data = await axios.get(
         "https://chartify-server-sigma.vercel.app/dashboard"
@@ -20,6 +21,9 @@ const Dashboard = () => {
       //Add this code if you are working with localhost server
       //const data = await axios.get("http://localhost:3000/dashboard");
 
+=======
+      const data = await axios.get("https://chartify-server-sigma.vercel.app/dashboard");
+>>>>>>> 93c9b8c2e30c7ee3029d75177efea7eaea075f1e
       setIsFetching(false);
       setDocuments(data.data);
       setFilteredDocuments(data.data);

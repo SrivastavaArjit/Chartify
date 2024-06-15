@@ -38,8 +38,17 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.send("Hello World");
+})
+
 app.get("/dashboard", async (req, res) => {
+<<<<<<< HEAD
   const fetchData = await DashboardData.find({});
+=======
+ 
+    const fetchData = await DashboardData.find({});
+>>>>>>> 93c9b8c2e30c7ee3029d75177efea7eaea075f1e
   res.send(fetchData);
 });
 app.listen(port, () => {
